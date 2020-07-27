@@ -1,0 +1,27 @@
+## Logistic Regression
+
+LR uses sigmoid function to output the probability of input features' belonging to positive (1) class. Sigmoid function is formulated as:
+$$
+h(x^{(i)},\theta) = \frac {1}{1 + e^{-\theta^{T} x^{(i)}}}
+$$
+where $x^{(i)}$ is the feature vector of $i^{\text{th}}$ tweet in the dataset and $\theta$ is the model parameters vector. Sigmoid function approaches to $+\infty$ as $\theta^{T}x^{(i)}$ gets larger and $- \infty$  at it gets smaller. We use $0.5$ as the threshold to divide inputs into positive or negative classes. The visualization is as below:
+
+<img src=fig/sigmoid.png style="zoom: 50%">
+
+$\theta$ vector is updated (learned) with gradient descent algorithm where model parameters are iteratively modified to align model predictions with labels in the training data. We can summarize the gradient descent as below:
+
+<img src="D:/Classes/NLP/Course I - NLP with Classification and Vector Spaces/Week I/fig/gradient_descent.png" style="zoom: 33%" />
+
+Here, the parameter update is based on the gradient of the loss function ($J(\theta)$) and learning rate ($\alpha$). We use *cross-entropy* (CE) as the loss, though other options are also available. We formulate CE as
+
+$$
+J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} [y^{(i)} \log h(x^{(i)},\theta) + (1 - y^{(i)}) \log(1 - h(x^{(i)}, \theta))]
+$$
+where $m$ is the number of tweets in the dataset. Here, LHS of the loss is $0$  when $y^{(i)}=0$  or both $y^{(i)}$ and $h (x^{(i)}, \theta)$ are $1$. In other words, LHS of CE brings cost only when the label $1$ but the model prediction is not. The RHS behaves opposingly and adds cost only when the label $0$ but the model prediction is not. **Therefore, LHS forces the model to label positive samples as positive and RHS forces the model to label negative sentiments as negative.** The starting $-$ sign is to ensure that the cost is always positive, since logarithms yield negative results.
+
+**Evaluation:** We can separate a part of our dataset to estimate the model performance on unseen data. This part is called as the *test set* and never used during training. We can use accuracy as the performance metric since our dataset is balanced and we have a classification problem. We compute accuracy as 
+$$
+\frac{1}{m} \sum_{i=1}^{m} \hat{y}^{(i)} == y^{(i)}
+$$
+
+ 
