@@ -5,12 +5,12 @@
 
 ### Week II
 
-- [Naive Bayes](./Week II/Naive Bayes.ipynb)
+- [Naive Bayes](https://github.com/Pselen/Deeplearning.ai-Natural-Language-Processing-Specialization/blob/master/Course%20I%20-%20NLP%20with%20Classification%20and%20Vector%20Spaces/Week%20II/Naive%20Bayes.ipynb)
 
 ### Week III
 
-- [Vector Space Models](./Week III/Vector Space Models.ipynb)
+- [Vector Space Models](https://github.com/Pselen/Deeplearning.ai-Natural-Language-Processing-Specialization/blob/master/Course%20I%20-%20NLP%20with%20Classification%20and%20Vector%20Spaces/Week%20III/Vector%20Space%20Models.ipynb)
 
 ### Week IV
 
-- [Machine Translation](./Week IV/Machine Translation.ipynb)
+- [Machine Translation](https://github.com/Pselen/Deeplearning.ai-Natural-Language-Processing-Specialization/blob/master/Course%20I%20-%20NLP%20with%20Classification%20and%20Vector%20Spaces/Week%20IV/Machine%20Translation.ipynb)
